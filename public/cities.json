@@ -1,0 +1,150 @@
+[
+    {
+      "name": "City 1",
+      "x": 0,
+      "y": 0,
+      "width": 100,
+      "height": 100,
+      "energy": 100,
+      "efficiency": 100,
+      "building": 20,
+      "cEnergyTax": 10,
+      "cEfficiencyRequirement": "100",
+      "buildingToLandscape": [],
+      "buildingToNft": [],
+      "Owner": "",
+      "avatarContractAddress": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+      "structureFactoryAddress": "",
+      "citizenship": "",
+      "citizens": [],
+      "avatarBlockList": [],
+      "population": "500",
+      "buildings": [
+        {
+          "id": "0",
+          "type": "House",
+          "xlocation": 0,
+          "ylocation": 0
+        },
+        {
+          "id": "1",
+          "type": "House",
+          "xlocation": 20,
+          "ylocation": 0
+        },
+        {
+          "id": "2",
+          "type": "Bakery",
+          "xlocation": 40,
+          "ylocation": 0
+        },
+        {
+          "id": "3",
+          "type": "Goldmine",
+          "xlocation": 60,
+          "ylocation": 0
+        }
+      ]
+    },
+    {
+      "name": "City 2",
+      "x": 100,
+      "y": 0,
+      "width": 100,
+      "height": 100,
+      "energy": 100,
+      "efficiency": 100,
+      "building": 20,
+      "cEnergyTax": 10,
+      "cEfficiencyRequirement": "100",
+      "buildingToLandscape": [],
+      "buildingToNft": [],
+      "Owner": "",
+      "avatarContractAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "structureFactoryAddress": "",
+      "citizenship": "",
+      "citizens": [],
+      "avatarBlockList": [],
+      "population": "500",
+      "buildings": [
+        {
+          "id": "0",
+          "type": "House",
+          "xlocation": 0,
+          "ylocation": 0
+        },
+        {
+          "id": "1",
+          "type": "Goldmine",
+          "xlocation": 80,
+          "ylocation": 0
+        },
+        {
+          "id": "2",
+          "type": "Bakery",
+          "xlocation": 60,
+          "ylocation": 0
+        }
+      ]
+    },
+    {
+      "name": "City 3",
+      "x": 200,
+      "y": 0,
+      "width": 100,
+      "height": 100,
+      "energy": 100,
+      "efficiency": 100,
+      "building": 20,
+      "cEnergyTax": 10,
+      "cEfficiencyRequirement": "100",
+      "buildingToLandscape": [],
+      "buildingToNft": [],
+      "Owner": "",
+      "avatarContractAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "structureFactoryAddress": "",
+      "citizenship": "",
+      "citizens": [],
+      "avatarBlockList": [],
+      "population": "500",
+      "buildings": [
+        {
+          "id": "0",
+          "type": "House",
+          "xlocation": 20,
+          "ylocation": 0
+        },
+        {
+          "id": "1",
+          "type": "Bakery",
+          "xlocation": 0,
+          "ylocation": 0
+        },
+        {
+          "id": "2",
+          "type": "House",
+          "xlocation": 10,
+          "ylocation": 0
+        },
+        {
+          "id": "3",
+          "type": "Bakery",
+          "xlocation": 40,
+          "ylocation": 0
+        },
+        {
+          "id": "4",
+          "type": "Goldmine",
+          "xlocation": 60,
+          "ylocation": 0
+        },
+        {
+          "id": "5",
+          "type": "Goldmine",
+          "xlocation": 80,
+          "ylocation": 0
+        }
+      ]
+    }
+  ]
+  

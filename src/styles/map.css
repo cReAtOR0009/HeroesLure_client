@@ -1,0 +1,32 @@
+.map {
+    /* height: 5000px;
+    width: 5000px; */
+    /* overflow: scroll; */
+    /* z-index: 1; */
+    background-size: 100px 100px;
+    background-image:
+    linear-gradient(to right, grey 1px, transparent 1px),
+    linear-gradient(to bottom, grey 1px, transparent 1px);
+}
+
+.mapContainer {
+    position: absolute;
+    background: #000;
+    width: calc(100vw - 600px);
+    margin-inline: 300px;
+    margin-block: 50px;
+    max-width: calc(100vw - 600px);
+}
+.landContainer {
+    /* z-index: 0; */
+    display: grid;
+    grid-template-columns: repeat(15, 100px);
+    grid-template-rows: repeat(15, 100px);
+    background-size: 100px 100px;
+    background-image:
+    linear-gradient(to right, grey 1px, transparent 1px),
+    linear-gradient(to bottom, grey 1px, transparent 1px);
+}
+.landContext {
+    z-index: 10;
+}
