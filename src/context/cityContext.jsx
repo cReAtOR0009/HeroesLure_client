@@ -1,4 +1,4 @@
-import { useReducer, useContext, useEffect, createContext } from "react";
+import { useReducer, useContext, useEffect, createContext, act } from "react";
 import axios from "axios";
 
 // Define initial state
@@ -14,7 +14,9 @@ const FETCH_DATA_REQUEST = "FETCH_DATA_REQUEST";
 const FETCH_DATA_SUCCESS = "FETCH_DATA_SUCCESS";
 const FETCH_DATA_FAILURE = "FETCH_DATA_FAILURE";
 const FILTER_CITY = "FILTER_CITY";
+const GET_CITY = "GET_CITY";
 const ADD_CITY = "ADD_CITY";
+const ADD_BUILDING = "ADD_BUILDING";
 const VIEW_CITY = "VIEW_CITY";
 const REMOVE_CITY = "REMOVE_CITY";
 
@@ -51,11 +53,31 @@ const cityReducer = (state, action) => {
         ],
       };
     case ADD_CITY:
-      const { city } = action.payload;
+      const  city  = action.payload;
+      console.log("city.....", city)
       return {
         ...state,
         data: [...state.data, city],
       };
+    case ADD_BUILDING:
+      const {id, building} = action.payload
+      let Tocity = state.data.find((city) => city.id === id)
+      console.log("found city:", Tocity)
+      if(Tocity) {
+        Tocity.buildings.push(building)
+        console.log("Tocity:", Tocity)
+        return {
+          ...state,
+          data:[...state.data,Tocity]
+        }
+      }
+      // Tocity.build
+      return
+
+      return {
+        ...state,
+        data
+      }
     case REMOVE_CITY:
       //   const { cityId } = action.payload;
       console.log("cityId:", action.payload);
@@ -105,7 +127,7 @@ export const CityContextProvider = ({ children }) => {
   // Add city action creator (async)
   const addCity = (city) => {
     try {
-      console.log("addcity function called:", city);
+      // console.log("addcity function called:", city);
       dispatch({ type: ADD_CITY, payload: city });
       console.log("finished dispatching..........", cityState);
       // const response = await axios.post('../../public/cities.js', city);
@@ -124,6 +146,20 @@ export const CityContextProvider = ({ children }) => {
       console.error("Error removing city:", error);
     }
   };
+
+  const addBuilding = ({id, building}) => {
+    console.log("id:", id, "building:", building)
+    try {
+      // console.log("addcity function called:", city);
+      dispatch({ type: ADD_BUILDING, payload: {id, building} });
+    } catch (error) {
+      console.error("Error adding city:", error);
+    }
+  }
+
+  const getCities = () => cityState.data
+  const getCityState = () => cityState
+
   return (
     <CityContext.Provider
       value={{
@@ -131,6 +167,9 @@ export const CityContextProvider = ({ children }) => {
         addCity,
         removeCity,
         filterCity,
+        getCityState,
+        getCities,
+        addBuilding
       }}
     >
       {children}

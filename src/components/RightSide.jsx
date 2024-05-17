@@ -5,7 +5,7 @@ const RightSide = () => {
   return (
     <>
     <div className='fixed top-[100px] right-0 h-[100vh] w-[300px] bg-transparent'>rightSide
-      <TestComponent />
+      {/* <TestComponent /> */}
     </div>
     </>
   )

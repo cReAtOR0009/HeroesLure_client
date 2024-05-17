@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import "../styles/map.css";
 import { citiesData } from "../../public/cities";
+import { CityContext } from "../context/cityContext.jsx";
 import {lands} from "../../public/land.js";
 import "../styles/map.css";
 import City from "./City";
 import Land from "./Land";
 const Map = () => {
   const scale = 1;
-  // citiesData.length = 500
+  const {getCities} = useContext(CityContext)
+  
   return (
     <>
       <div className="  mapContainer  overflow-scroll h-screen inline-block top-[100px]">
         <div className="map  relative  w-[1500px] mx-[300px] my-[50px] inline-block h-[1500px] flex ">
-          {citiesData.map((city, index) => {
+          {getCities().map((city, index) => {
             return <City key={index} {...city} />;
           })}
         </div>

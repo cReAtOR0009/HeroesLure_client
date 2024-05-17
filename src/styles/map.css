@@ -27,6 +27,54 @@
     linear-gradient(to right, grey 1px, transparent 1px),
     linear-gradient(to bottom, grey 1px, transparent 1px);
 }
-.landContext {
-    z-index: 10;
+
+.acitveCity {
+    background-size: 10px 10px;
+    background-image:
+    linear-gradient(to right, grey 1px, transparent 1px),
+    linear-gradient(to bottom, grey 1px, transparent 1px);
 }
+
+.highlight {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 0, 0.5); /* semi-transparent yellow */
+    cursor: pointer;
+    /* position: absolute; */
+    /* pointer-events: none; */
+  }
+.landContext {
+    z-index: 5;
+}
+
+.city-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(10, 50px);
+    gap: 0;
+    position: relative;
+  }
+  
+  .grid-cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .road {
+    background-color: #ccc; /* Gray color for roads */
+  }
+  
+  .buildable {
+    background-color: #fff; /* White color for buildable spaces */
+  }
+  
+  .hover.buildable {
+    background-color: rgba(0, 0, 255, 0.5); /* Semi-transparent blue for hover */
+  }
+  
+  .building {
+    background-color: #0a0; /* Green color for buildings */
+  }
+  
